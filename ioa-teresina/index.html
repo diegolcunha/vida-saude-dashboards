@@ -2,10 +2,64 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <title>IOA Teresina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IOA Teresina | Dashboard Vida Saúde</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Dashboard IOA Teresina</h1>
-    <p>Primeira versão em construção.</p>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Vida Saúde · Relatório mínimo</p>
+        <h1>IOA Teresina</h1>
+      </div>
+      <div class="period">
+        <span>Período</span>
+        <strong id="periodo">Carregando</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="executive">
+        <div>
+          <h2>Leitura executiva</h2>
+          <p id="leitura">Carregando indicadores.</p>
+        </div>
+      </section>
+
+      <section class="kpis" id="kpis" aria-label="Indicadores principais"></section>
+
+      <section class="grid two">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Movimento do funil</h2>
+            <p>Relatório 1 versus Relatório 2</p>
+          </div>
+          <div class="bars" id="bars"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Base recuperável</h2>
+            <p>Bloqueios operacionais identificados no Relatório 2</p>
+          </div>
+          <div class="recovery" id="recovery"></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Ações comerciais</h2>
+          <p>Fila agregada para operação, sem dados pessoais de leads</p>
+        </div>
+        <div class="actions" id="actions"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Base pública agregada. Nomes e telefones foram omitidos.</span>
+      <span id="updated"></span>
+    </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
